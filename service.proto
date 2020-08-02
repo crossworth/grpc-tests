@@ -1,0 +1,17 @@
+syntax = "proto3";
+
+package test;
+
+option go_package = ".;myservice";
+
+service MyService {
+    rpc DoSomething (DoSomethingRequest) returns (DoSomethingResponse) {}
+}
+
+message DoSomethingRequest {
+    string name = 1;
+}
+
+message DoSomethingResponse {
+    string message = 1;
+}
